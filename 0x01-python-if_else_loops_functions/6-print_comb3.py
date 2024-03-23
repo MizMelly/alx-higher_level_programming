@@ -1,4 +1,7 @@
 #!/usr/bin/python3
-for i in range(10):
-    for j in range(i+1, 10):
-        print("{:02d}, {:02d}".format(i, j), end=', ' if i != 8 or j != 9 else '\n')
+for first_number in range(0, 10):
+    for second_number in range(first_number + 1, 10):
+        if first_number == 8 and second_number == 9:
+            print("{}{}".format(first_number, second_number))
+        else:
+            print("{}{}, ".format(first_number, second_number), end='')
