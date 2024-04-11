@@ -1,9 +1,9 @@
-#include <python3.h>
+#include <Python.h>
 #include <stdlib.h>
 #include <stdio.h>
 /**
  * print_python_list_info -  function that prints some basic
- *							info about Python lists
+ * info about Python lists
  * @p: python list
  */
 void print_python_list_info(PyObject *p)
