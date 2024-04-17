@@ -1,0 +1,49 @@
+========================
+How to Use 1-my_list.py
+========================
+
+This module defines a class ''MyList'' that inherites from "list".
+
+Instantiation
+=============
+
+''MyList'' can be instantiated with no arguments, which will return
+an empty list:
+
+::
+
+   >>> MyList = __import__('1-my_list').MyList
+   >>> my_list = MyList()
+   >>> type(my_list)
+   <class '1-my_list.MyList'>
+
+::
+
+  >>> print(my_list)
+  []
+
+or a single argument, which must be an iterable object.
+
+::
+
+  >>> my_list = MyList ([1, 2, 3])
+  >>> print(my_list)
+  [1, 2, 3]
+
+::
+
+  >>> my_list = MyList(None)
+  Traceback (most recent call last):
+  TypeErroe: 'NoneType' object is not iterable
+
+''TypeError" wil be raised for any more than one instantiation arguments.
+
+::
+  >>>my_list = MyList([1, 2], [3, 4])
+  Trackback (most recent call last):
+  TypeError: list() takes at most 1 argument (2 given)
+
+Usage
+=====
+
+
