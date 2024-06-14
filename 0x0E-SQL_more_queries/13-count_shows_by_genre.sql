@@ -7,10 +7,10 @@
 -- Results must be sorted in descending order by the number of shows linked
 -- You can use only one SELECT statement
 -- The database name will be passed as an argument of the mysql
-SELECT g.'name' AS 'genre'
-       COUNT(*) AS 'number_of_shows'
-FROM 'tv_genres' AS g
-INNER JOIN 'tv_show_genres' AS t
-ON g.`id` = t.'genre_id'
-GROUP BY g.'name'
-ORDER BY 'number_of_shows' DESC;
+SELECT g.`name` AS `genre` ,
+COUNT(*) AS `number_of_shows`
+FROM `tv_genres` AS g
+INNER JOIN `tv_show_genres` AS t
+ON g.`id` = t.`genre_id`
+GROUP BY g.`name`
+ORDER BY `number_of_shows` DESC;
