@@ -6,20 +6,13 @@
 -- Results must be sorted in ascending order by the show title
 -- You can use a maximum of two SELECT statement
 -- The database name will be passed as an argument of the mysql command
-SELECT DIATINCT `title`
-FROM `tv_shows` AS t
-LEFT JOIN `tv_shows_genres` AS s
-ON s.`show_id` = t.`id`
-
-LEFT JOIN `tv_genres` AS g
-ON s.`show_id` = s.`genre_id`
-WHERE t.`title` NOT IN
-(SELECT `title` 
-	FROM `tv_shows` AS t
-	INNER JION `tv_show_genres` AS s
-	ON t.`id` = s.`show_id`
-
-	INNER JOIN `tv_genres` AS g 
-	ON s.`genre_id` = g.`id`
-	WHERE g.`name` = "Comedy")
-ORDER BY g.`title`;
+SELECT DISTINCT t.title
+FROM tv_shows AS t
+WHERE t.id NOT IN (
+    SELECT t.id
+    FROM tv_shows AS t
+    INNER JOIN tv_show_genres AS s ON t.id = s.show_id
+    INNER JOIN tv_genres AS g ON s.genre_id = g.id
+    WHERE g.name = "Comedy"
+)
+ORDER BY t.title;
