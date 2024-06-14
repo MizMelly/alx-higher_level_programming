@@ -1,0 +1,1 @@
+MySQL is an open-source relational database management system. It is commonly deployed as part of the LAMP stack (which stands for Linux, Apache, MySQL, and PHP) and, as of this writing, is the most popular open-source database in the world.
