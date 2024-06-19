@@ -1,6 +1,6 @@
 #!/usr/bin/node
-/* a script that prints two arguments passed to it, in the following format: “ is ” */
+/* a script that prints two arguments passed to it, in the following format: “<arg1> is <arg2>” */
 const arg1 = process.argv[2];
 const arg2 = process.argv[3];
 
-console.log(arg1 + is + arg2);
+console.log(`${arg1} is ${arg2}`);
